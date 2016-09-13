@@ -2,7 +2,13 @@ var ToDo = require('mongoose').model('ToDo');
 
 module.exports = {
 
+
+
   index: function(req, res, next) {
+    if (!req.user) {
+        res.redirect('/');
+        return;
+    }
     ToDo.find({}, function(err, todos) {
       if (err) return next(err);
 			   res.json(todos);
@@ -12,6 +18,7 @@ module.exports = {
     	// 	userFullName: req.user ? req.user.fullName : ''
       // })
     });
+
   },
 
   // new: function(req , res, next){
