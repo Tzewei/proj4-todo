@@ -7,13 +7,15 @@
 <body>
 	<!-- If a user is authenticated, display the user's full name , otherwise display the authentication links -->
 	<% if ( userFullName ) { %>
-		<h2>Hello <%=userFullName%> </h2> 
+		<h2>Hello <%=userFullName%> </h2>
 		<a href="/signout">Sign out</a>
 	<% } else { %>
 		<a href="/signup">Signup</a>
 		<a href="/signin">Signin</a>
 	<% } %>
 	<br>
+
+
 
 	<!-- Load the static image file  -->
 	<img src="img/logo.png" alt="Logo">
