@@ -11,16 +11,18 @@ module.exports = {
       if (err) return next(err);
 			  //  res.json(todos);
 
-      res.render('todo/todoindex',{
+      res.render('todoindex',{
         todos: todos,
-        // title: 'Todo Index',
+        title: 'Todo Index',
     		// userFullName: req.user ? req.user.fullName : ''
       });
     });
   },
 
   new: function(req , res){
-    res.render('todo/todoaddtask');
+    res.render('todoaddtask',{
+      title: 'Add new Task',
+    });
   },
 
   create: function(req, res) {

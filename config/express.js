@@ -10,7 +10,8 @@ var config = require('./config'),
 	methodOverride = require('method-override'),
 	session = require('express-session'),
 	flash = require('connect-flash'),
-	passport = require('passport');
+	passport = require('passport'),
+	expressLayouts = require('express-ejs-layouts');
 	// have to include express layout
 	// and  app.use(layout)check prima express reference
 
@@ -43,6 +44,7 @@ module.exports = function() {
 	// Set the application view engine and 'views' folder
 	app.set('views', './app/views');
 	app.set('view engine', 'ejs');
+	app.use(expressLayouts);
 
 	// Configure the flash messages middleware
 	app.use(flash());
