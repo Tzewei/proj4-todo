@@ -2,9 +2,7 @@ var ToDo = require('mongoose').model('ToDo');
 
 module.exports = {
 
-
-
-  index: function(req, res, next) {
+  index: function(req, res) {
     // if (!req.user) {
     //     res.redirect('/');
     //     return;
@@ -21,18 +19,17 @@ module.exports = {
     });
   },
 
-  add: function(req , res, next){
-    
-
-
+  new: function(req , res){
+    res.render('todo/todoaddtask');
   },
 
-  create: function(req, res, next) {
+  create: function(req, res) {
+    console.log(req.body)
     var toDo = new ToDo(req.body);
 
     toDo.save(function(err) {
       if (err) return next(err);
-      res.json(toDo);
+      res.redirect('/todos')
     });
 
   },
@@ -41,7 +38,7 @@ module.exports = {
   //
   // },
 
-	update: function(req, res, next) {
+	update: function(req, res) {
 	  ToDo.findByIdAndUpdate(req.params.id, req.body, function(err, todo) {
 	    if (err) {
 	      return next(err);
@@ -51,7 +48,7 @@ module.exports = {
 	  });
 	},
 
-	destroy: function(req, res, next) {
+	destroy: function(req, res) {
 		ToDo.remove({
 			_id: req.params.id
 		}, function(err, todo){

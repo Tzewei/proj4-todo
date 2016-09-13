@@ -11,7 +11,10 @@ module.exports = function(app) {
 	app.route('/todo')
 		.post(toDoController.create)
 
-	// app.route('/todo/new')
+	app.route('/todo/new')
+		.get(toDoController.new)
+		.post(toDoController.create);
+
 	// 	.get(toDoController.new)
 
 	 app.route('/todo/:id')

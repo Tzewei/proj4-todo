@@ -11,6 +11,8 @@ var config = require('./config'),
 	session = require('express-session'),
 	flash = require('connect-flash'),
 	passport = require('passport');
+	// have to include express layout
+	// and  app.use(layout)check prima express reference
 
 // Define the Express configuration method
 module.exports = function() {
