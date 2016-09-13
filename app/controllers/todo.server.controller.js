@@ -5,25 +5,27 @@ module.exports = {
 
 
   index: function(req, res, next) {
-    if (!req.user) {
-        res.redirect('/');
-        return;
-    }
+    // if (!req.user) {
+    //     res.redirect('/');
+    //     return;
+    // }
     ToDo.find({}, function(err, todos) {
       if (err) return next(err);
-			   res.json(todos);
-      // res.render('index',{
-      //   todos: todos,
-      //   title: 'Hello World',
-    	// 	userFullName: req.user ? req.user.fullName : ''
-      // })
-    });
+			  //  res.json(todos);
 
+      res.render('todo/todoindex',{
+        todos: todos,
+        // title: 'Todo Index',
+    		// userFullName: req.user ? req.user.fullName : ''
+      });
+    });
   },
 
-  // new: function(req , res, next){
-  //
-  // },
+  add: function(req , res, next){
+    
+
+
+  },
 
   create: function(req, res, next) {
     var toDo = new ToDo(req.body);

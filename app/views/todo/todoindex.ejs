@@ -1,0 +1,28 @@
+<h1>This is todo list index</h1>
+
+
+<!-- <%= todos[0].task %>; -->
+<!-- <% todos.forEach(function(todo){ %>
+		<h1><%= todo.task %></h1>
+	<% }) %> -->
+
+  <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Task</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+
+          <% todos.forEach(function(todo){ %>
+          		<tr>
+                <td><%= todo.task %></td>
+                <td>Edit</td>
+                <td>Delete</td>
+            </tr>
+          	<% }) %>
+
+      </tbody>
+    </table>
