@@ -32,7 +32,7 @@ module.exports = function() {
 		extended: true
 	}));
 	app.use(bodyParser.json());
-	app.use(methodOverride());
+	app.use(methodOverride('_method'));
 
 	// Configure the 'session' middleware
 	app.use(session({

@@ -1,0 +1,18 @@
+<h2>Delete <br>
+	ID: <%=todo.id%> <br>
+	Task: <%=todo.task%>
+
+</h2>
+
+
+<h3>This is the selected Task: <br>
+	 <%=todo.task%> </h3>
+<h3>Press to delete task.</h3>
+
+
+
+	<!-- Render the edit form  -->
+	<form action=<%="/todo/" + todo.id + "?_method=delete"%> method="post">
+			<input type="submit" value="Delete" />
+		</div>
+	</form>

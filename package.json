@@ -1,25 +1,25 @@
 {
-	"name": "proj4-todo",
-	"version": "0.0.6",
-	"main": "server.js",
+  "name": "proj4-todo",
+  "version": "0.0.6",
+  "main": "server.js",
   "scripts": {
     "start": "nodemon server"
   },
-	"dependencies": {
-		"express": "^4.14.0",
-		"express-ejs-layouts": "^2.2.0",
-		"morgan": "^1.7.0",
-		"compression": "~1.0.11",
-		"body-parser": "^1.15.2",
-		"method-override": "^2.3.6",
-		"express-session": "^1.14.0",
-		"ejs": "^2.5.1",
-		"connect-flash": "~0.1.1",
-		"mongoose": "^4.5.9",
-		"passport": "~0.2.1",
-		"passport-local": "~1.0.0",
-		"passport-facebook": "~1.0.3",
-		"passport-twitter": "~1.0.2",
-		"passport-google-oauth": "~0.1.5"
-	}
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "compression": "~1.0.11",
+    "connect-flash": "~0.1.1",
+    "ejs": "^2.5.1",
+    "express": "^4.14.0",
+    "express-ejs-layouts": "^2.2.0",
+    "express-session": "^1.14.0",
+    "method-override": "^2.3.6",
+    "mongoose": "^4.5.9",
+    "morgan": "^1.7.0",
+    "passport": "~0.2.1",
+    "passport-facebook": "~1.0.3",
+    "passport-google-oauth": "~0.1.5",
+    "passport-local": "~1.0.0",
+    "passport-twitter": "~1.0.2"
+  }
 }

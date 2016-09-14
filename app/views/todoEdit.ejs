@@ -1,0 +1,27 @@
+<h2>Editing <br>
+	ID: <%=todo.id%> <br>
+	Task: <%=todo.task%>
+
+</h2>
+
+	<!-- Render the edit form  -->
+	<form action=<%="/todo/" + todo.id + "?_method=PATCH"%> method="post">
+		<div>
+			<label>Task:</label>
+			<input type="text" name="task" value="<%=todo.task%>" />
+		</div>
+		<div>
+			<label>Completed:</label>
+			<input type="text" name="completed" value="<%=todo.completed%>" />
+		</div>
+
+    <div>
+			<input type="submit" value="Confirm" />
+		</div>
+	</form>
+
+	<!-- Render the edit form  -->
+	<!-- <form action=<%="/todo/" + todo.id + "?_method=delete"%> method="post">
+			<input type="submit" value="Delete" />
+		</div>
+	</form> -->

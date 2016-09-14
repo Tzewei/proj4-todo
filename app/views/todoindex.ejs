@@ -4,6 +4,8 @@
 		<h1><%= todo.task %></h1>
 	<% }) %> -->
 
+
+
   <table class="table table-hover">
       <thead>
         <tr>
@@ -17,10 +19,21 @@
           <% todos.forEach(function(todo){ %>
           		<tr>
                 <td><%= todo.task %></td>
-                <td>Edit</td>
-                <td>Delete</td>
+                <td><a class="btn btn-info" href="todo/<%= todo.id %>">edit</a>
+
+                </td>
+                <!-- <td>Delete - <a href="todo/<%= todo.id %>">Delete</a></td> -->
+                <td>
+                  <form action=<%="/todo/" + todo.id + "?_method=delete"%> method="post">
+                      <input class="btn btn-warning" type="submit" value="Delete" />
+                    
+                  </form>
+                </td>
             </tr>
           	<% }) %>
 
       </tbody>
     </table>
+
+<!-- console.log(req.body)
+ -->
