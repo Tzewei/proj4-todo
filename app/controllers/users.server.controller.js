@@ -42,7 +42,9 @@ exports.renderSignin = function(req, res, next) {
 			// Set the page title variable
 			title: 'Sign-in Form',
 			// Set the flash message variable
-			messages: req.flash('error') || req.flash('info')
+			messages: req.flash('error') || req.flash('info'),
+			userFullName: req.user ? req.user.fullName : ''
+
 		});
 	} else {
 		return res.redirect('/');
@@ -58,7 +60,9 @@ exports.renderSignup = function(req, res, next) {
 			// Set the page title variable
 			title: 'Sign-up Form',
 			// Set the flash message variable
-			messages: req.flash('error')
+			messages: req.flash('error'),
+			userFullName: req.user ? req.user.fullName : ''
+
 		});
 	} else {
 		return res.redirect('/');
@@ -122,9 +126,9 @@ exports.saveOAuthUserProfile = function(req, profile, done) {
 
 				// Find a unique available username
 				User.findUniqueUsername(possibleUsername, null, function(availableUsername) {
-					// Set the available user name 
+					// Set the available user name
 					profile.username = availableUsername;
-					
+
 					// Create the user
 					user = new User(profile);
 
@@ -149,4 +153,5 @@ exports.signout = function(req, res) {
 
 	// Redirect the user back to the main application page
 	res.redirect('/');
+
 };

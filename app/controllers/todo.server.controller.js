@@ -14,7 +14,7 @@ module.exports = {
       res.render('todoindex',{
         todos: todos,
         title: 'Todo Index',
-    		// userFullName: req.user ? req.user.fullName : ''
+    		userFullName: req.user ? req.user.fullName : ''
       });
     });
   },
@@ -22,6 +22,7 @@ module.exports = {
   new: function(req , res){
     res.render('todoaddtask',{
       title: 'Add new Task',
+      userFullName: req.user ? req.user.fullName : ''
     });
   },
 
@@ -71,6 +72,7 @@ module.exports = {
           res.render('todoDelete',{
             todo:found,
             title: 'To Do Delete',
+            userFullName: req.user ? req.user.fullName : ''
           });
         }
       });

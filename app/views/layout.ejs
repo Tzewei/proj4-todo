@@ -2,22 +2,50 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title><%= title %></title>
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Asap|Bevan|Passion+One|Sigmar+One">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    <title>My To Do List - <%= title %></title>
   </head>
   <body>
-    <div class="container">
-      <h1>Welcome to my To Do List</h1>
+
+    <div class="container-fluid">
+      <div class="mainTitle"> My To Do List </div>
+
+    </div>
+
+      <% include navbar %>
+
+      <%- body %>
 
       <a href="/todos">Todos List</a> |
       <a href="/todo/new">Add New List</a>
 
-      <%- body %>
+
+      <div class="Asap">Making the Web Beautiful!</div>
+            <div class="Passion">Making the Web Beautiful!</div>
+            <div class="Sigmar">Making the Web Beautiful!</div>
+            <div class="Bevan">Making the Web Beautiful!</div>
+
+
+
     </div>
     <script src="/reload/reload.js"></script>
   </body>
+
+
+
+
+
+
+
+
+
+
 </html>

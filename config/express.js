@@ -53,6 +53,11 @@ module.exports = function() {
 	app.use(passport.initialize());
 	app.use(passport.session());
 
+	// app.use(function(req, res, next){
+	// 	global.currentUser = req.user;
+	// 	next();
+	// });
+
 	// Load the routing files
 	require('../app/routes/index.server.routes.js')(app);
 	require('../app/routes/todo.server.routes.js')(app);
