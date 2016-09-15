@@ -6,12 +6,11 @@
 
 
 
-
+<div class="table-responsive">
   <table class="table table-hover">
       <thead>
         <tr>
           <th>My Task</th>
-
           <th>Status</th>
           <th></th>
         </tr>
@@ -25,20 +24,18 @@
                 <!-- <td><%= todo.completed %>  </td> -->
 
                 <td><% if (todo.completed ) { %>
-                                            Task completed! Well Done!
+                                            Completed!
                                       <% } else { %>
-                                            Not finished yet!
+                                            Not Completed!
                                       <% } %>
-                          </td>
+                </td>
 
                 <td><a class="btn btn-info" href="todo/<%= todo.id %>">edit</a>
-
                 </td>
                 <!-- <td>Delete - <a href="todo/<%= todo.id %>">Delete</a></td> -->
                 <td>
                   <form action=<%="/todo/" + todo.id + "?_method=delete"%> method="post">
                       <input class="btn btn-warning" type="submit" value="delete" />
-
                   </form>
                 </td>
             </tr>
@@ -46,6 +43,7 @@
 
       </tbody>
     </table>
+  </div>
 <a href="/todo/new">+ Add A New Task</a>
 <!-- console.log(req.body)
  -->

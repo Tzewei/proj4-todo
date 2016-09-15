@@ -15,30 +15,32 @@
   </head>
   <body>
 
-    <div class="container-fluid">
+        <div class="row">
+  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+  <!-- Optional: clear the XS cols if their content doesn't match in height -->
+  <div class="clearfix visible-xs-block"></div>
+  <div class="col-xs-6 col-md-4">.col-xs-6 .col-sm-4</div>
+</div>
 
 
       <!-- <a href="/"><div class="mainTitle"> My to do list </div></a> -->
 
       <div class="mainTitle">  <a href="/"> My to do list  </a> </div>
 
-      <!-- <span style="font-family: 'Sigmar One';
-      font-size: 70px;
-      color: red;text-align: center;">My to do list</span> -->
-
-    </div>
-
       <% include navbar %>
 
       <%- body %>
 
-<a href="/todos">My Task List</a>
-<a href="/todo/new">add Task </a>
+    </div>
 
+<!-- <a href="/todos">My Task List</a>
+<a href="/todo/new">add Task </a> -->
+<!--
       <div class="Asap">Normal Text</div>
             <div class="Passion">Not Yet here</div>
             <div class="Sigmar">Main Title!</div>
-            <div class="Bevan">Link and button text!</div>
+            <div class="Bevan">Link and button text!</div> -->
 
 
 
