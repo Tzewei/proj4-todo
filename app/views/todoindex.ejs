@@ -11,7 +11,8 @@
       <thead>
         <tr>
           <th>My Task</th>
-          <th></th>
+
+          <th>Status</th>
           <th></th>
         </tr>
       </thead>
@@ -21,6 +22,15 @@
           		<tr>
                 <td><%= todo.task %></td></div>
                 <% counter++ %>
+                <!-- <td><%= todo.completed %>  </td> -->
+
+                <td><% if (todo.completed ) { %>
+                                            Task completed! Well Done!
+                                      <% } else { %>
+                                            Not finished yet!
+                                      <% } %>
+                          </td>
+
                 <td><a class="btn btn-info" href="todo/<%= todo.id %>">edit</a>
 
                 </td>
@@ -36,6 +46,6 @@
 
       </tbody>
     </table>
-
+<a href="/todo/new">+ Add A New Task</a>
 <!-- console.log(req.body)
  -->

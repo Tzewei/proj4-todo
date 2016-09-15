@@ -5,13 +5,19 @@
 			<label>Task:</label>
 			<input type="text" name="task" value="<%=todo.task%>" />
 		</div>
+
+
 		<div class="form-group">
-			<label>Completed:</label>
-			<input type="text" name="completed" value="<%=todo.completed%>" />
+		  <label class="radio-inline"><input type="radio" name="completed" value=true
+				<% if (todo.completed ) { %> checked <% } %> >Task Completed</label>
+			<label class="radio-inline"><input type="radio" name="completed" value=false
+				<% if (!todo.completed ) { %> checked <% } %> >Task Not completed</label>
 		</div>
 
+
+
     <div class="form-group">
-			<input type="submit" value="Confirm" />
+			<input type="submit" value="I am done with editing" />
 		</div>
 	</form>
 

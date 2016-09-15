@@ -5,10 +5,10 @@ var counter = 1;
 module.exports = {
 
   index: function(req, res) {
-    // if (!req.user) {
-    //     res.redirect('/');
-    //     return;
-    // }
+    if (!req.user) {
+        res.redirect('/');
+        return;
+    }
     ToDo.find({}, function(err, todos) {
       if (err) return next(err);
 			  //  res.json(todos);
@@ -23,6 +23,10 @@ module.exports = {
   },
 
   new: function(req , res){
+    if (!req.user) {
+        res.redirect('/');
+        return;
+    }
     res.render('todoaddtask',{
       title: 'Add new Task',
       userFullName: req.user ? req.user.fullName : ''
@@ -41,6 +45,10 @@ module.exports = {
   },
 
   edit: function(req, res){
+    if (!req.user) {
+        res.redirect('/');
+        return;
+    }
     ToDo.findById(req.params.id, function (err, found) {
       if (err) {
         return next(err);
@@ -69,6 +77,10 @@ module.exports = {
   	},
 
     del: function(req, res){
+      if (!req.user) {
+          res.redirect('/');
+          return;
+      }
       ToDo.findById(req.params.id, function (err, found) {
         if (err) {
           return next(err);
