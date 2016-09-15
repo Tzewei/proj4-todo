@@ -6,19 +6,21 @@
 
 
 
+
   <table class="table table-hover">
       <thead>
         <tr>
-          <th>Task</th>
-          <th>Edit</th>
-          <th>Delete</th>
+          <th>My Task</th>
+          <th></th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
 
           <% todos.forEach(function(todo){ %>
           		<tr>
-                <td><%= todo.task %></td>
+                <td><%= todo.task %></td></div>
+                <% counter++ %>
                 <td><a class="btn btn-info" href="todo/<%= todo.id %>">edit</a>
 
                 </td>

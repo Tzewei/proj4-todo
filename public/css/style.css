@@ -1,5 +1,8 @@
 body{
   background-color: #C2FCFF;
+  font-family: 'Passion One';
+  font-size: 25px;
+  font-style: normal;
 }
 
 .mainTitle {
@@ -41,6 +44,25 @@ input[type=submit] {
   cursor:pointer;
   /*border-radius: 5px; */
 }
+
+.btn.btn-info {
+  font-family: 'Bevan';
+  font-size: 20px;
+  cursor:pointer;
+}
+
+th{
+  font-family: 'Sigmar One';
+  font-size: 30px;
+  font-stretch: expanded;
+  color: green;
+}
+
+/*#1B998B
+#2D3047
+#FC1D42
+#FFFD82
+#FF9B71*/
 
 
 .Asap{font-family: 'Asap', sans-serif;font-size: 48px; }

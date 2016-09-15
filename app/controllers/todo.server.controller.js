@@ -1,4 +1,6 @@
 var ToDo = require('mongoose').model('ToDo');
+// var colorSet = ['#1B998B','#2D3047','#FC1D42','#FFFD82','#FF9B71'];
+var counter = 1;
 
 module.exports = {
 
@@ -13,7 +15,8 @@ module.exports = {
 
       res.render('todoindex',{
         todos: todos,
-        title: 'Todo Index',
+        title: 'Index',
+        counter: counter,
     		userFullName: req.user ? req.user.fullName : ''
       });
     });
@@ -44,7 +47,8 @@ module.exports = {
       } else {
         res.render('todoEdit',{
           todo:found,
-          title: 'To Do Edit',
+          title: 'Edit',
+          userFullName: req.user ? req.user.fullName : ''
         });
       }
     });
@@ -71,7 +75,7 @@ module.exports = {
         } else {
           res.render('todoDelete',{
             todo:found,
-            title: 'To Do Delete',
+            title: 'Delete',
             userFullName: req.user ? req.user.fullName : ''
           });
         }
