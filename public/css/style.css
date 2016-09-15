@@ -35,6 +35,12 @@ label{
 }
 
 
+input[type=submit] {
+  font-family: 'Bevan';
+  font-size: 20px;
+  cursor:pointer;
+  /*border-radius: 5px; */
+}
 
 
 .Asap{font-family: 'Asap', sans-serif;font-size: 48px; }
