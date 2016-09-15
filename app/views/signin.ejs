@@ -4,23 +4,25 @@
 	<% } %>
 
 	<!-- Render the signin form  -->
-	<form action="/signin" method="post">
-		<div>
+
+	<form class="navbar-form navbar-center" 	action="/signin" method="post">
+		<div class="form-group">
 			<label>Username:</label>
 			<input type="text" name="username" />
 		</div>
-		<div>
-			<label>Password	:</label>
+		<div class="form-group">
+			<label>Password:</label>
 			<input type="password" name="password" />
 		</div>
-		<div>
-			<input type="submit" value="Sign In" />
+			<div class="form-group">
+			<input type="submit" class="btn btn-success" value="Sign In" />
+
 		</div>
 	</form>
 
-<ul>
+<!-- <ul> -->
 	<!-- Render the OAuth authentication links  -->
-	<li><a href="/oauth/facebook">Sign in with Facebook</a></li>
+	<!-- <li><a href="/oauth/facebook">Sign in with Facebook</a></li>
 	<li><a href="/oauth/twitter">Sign in with Twitter</a></li>
-	<li><a href="/oauth/google">Sign in with Google</a></li>
-</ul>
+	<li><a href="/oauth/google">Sign in with Google</a></li> -->
+<!-- </ul> -->

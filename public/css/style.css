@@ -1,8 +1,40 @@
-.mainTitle{
+body{
+  background-color: #C2FCFF;
+}
+
+.mainTitle {
+  text-align: center;
+ }
+
+.mainTitle a{
+
   font-family: 'Sigmar One';
-  font-size: 48px;
+  font-size: 70px;
+  color: red;
+  text-align: center;
+  text-decoration:none;
 
 }
+
+a{
+  font-family: 'Bevan';
+  font-size: 25px;
+}
+
+a:hover {
+  /*background-color: green;*/
+}
+
+label{
+  /*font-family: 'Passion One';
+  /*font-style: oblique;*/
+  /*font-size: 20px;*/
+  font-family: 'Asap';
+  font-style: sans-serif;
+  font-size: 20px;
+}
+
+
 
 
 .Asap{font-family: 'Asap', sans-serif;font-size: 48px; }
