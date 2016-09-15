@@ -19,8 +19,12 @@ var app = express();
 var passport = passport();
 
 // Use the Express application instance to listen to the '3000' port
-app.set('port',(process.env.PORT || 3000))
-app.listen(3000);
+app.set('port',(process.env.PORT || 3000));
+app.listen(app.get('port'), function() {
+  console.log('My express server is running at localhost', app.get('port'));
+
+}
+);
 
 // Log the server status to the console
 console.log('Server running at http://localhost:3000/');
