@@ -1,15 +1,35 @@
 
 	<!-- Render the signup form  -->
-	<form class="navbar-form navbar-center" action="/todos" method="post">
+	<form class="form-horizontal" action="/todos" method="post">
 		<div class="form-group">
-			<label>Task:</label>
-			<input type="text" name="task" />
+			<label class="col-sm-2 control-label">Task:</label>
+			<div class="col-sm-10">
+				<input type="text" name="task" />
+			</div>
 		</div>
+
+		<!-- <div class="form-group">
+			<label class="col-sm-2 control-label">Completed:</label>
+			<div class="col-sm-10">
+				<input type="text" name="completed" />
+			</div>
+		</div> -->
+
 		<div class="form-group">
-			<label>Completed:</label>
-			<input type="text" name="completed" />
+			<div class="col-sm-offset-2 col-sm-10">
+				<label class="radio-inline"><input type="radio" name="completed" value=true
+					 >Task Completed</label>
+
+				<label class="radio-inline"><input type="radio" name="completed" value=false
+					>Task Not completed</label>
+
+			</div>
 		</div>
+
+
     <div class="form-group">
-			<input type="submit" class="btn btn-success" value="Add New Task" />
+			<div class="col-sm-offset-2 col-sm-10">
+				<input type="submit" class="btn btn-success" value="Add New Task" />
+			</div>
 		</div>
 	</form>

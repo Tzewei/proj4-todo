@@ -14,15 +14,7 @@
     <title>My To do list - <%= title %></title>
   </head>
   <body>
-
-        <div class="row">
-  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-  <!-- Optional: clear the XS cols if their content doesn't match in height -->
-  <div class="clearfix visible-xs-block"></div>
-  <div class="col-xs-6 col-md-4">.col-xs-6 .col-sm-4</div>
-</div>
-
+    <div class="container-fluid">
 
       <!-- <a href="/"><div class="mainTitle"> My to do list </div></a> -->
 
@@ -31,6 +23,12 @@
       <% include navbar %>
 
       <%- body %>
+
+      <div class="box content">
+          <div class="content" id="weather">fff
+          </div>
+      </div>
+
 
     </div>
 
@@ -43,8 +41,6 @@
             <div class="Bevan">Link and button text!</div> -->
 
 
-
-    </div>
     <!-- <script src="/reload/reload.js"></script> -->
   </body>
 
