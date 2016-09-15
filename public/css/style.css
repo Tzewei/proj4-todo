@@ -65,6 +65,43 @@ th{
   color: green;
 }
 
+#weather{
+  color :#1B998B;
+  text-align: center;
+  margin: 0 auto;
+}
+
+p1{
+  color:#1B998B;
+  font-size: 40px;
+  text-align: center;
+}
+p2{
+  color:black;
+  font-family: 'Asap';
+  font-style: sans-serif;
+  font-size: 20px;
+
+}
+p3{
+  color:#FC1D42;
+  font-family: 'Asap';
+  font-style: sans-serif;
+  font-size: 50px;
+}
+p4{
+  color: black;
+  font-family: 'Asap';
+  font-style: sans-serif;
+  font-size: 20px;
+}
+p5{
+  color: #FF9B71;
+  font-family: 'Asap';
+  font-style: sans-serif;
+  font-size: 20px;
+}
+
 /*#1B998B
 #2D3047
 #FC1D42

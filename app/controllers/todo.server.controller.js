@@ -1,5 +1,5 @@
 var ToDo = require('mongoose').model('ToDo');
-// var colorSet = ['#1B998B','#2D3047','#FC1D42','#FFFD82','#FF9B71'];
+
 var counter = 1;
 
 module.exports = {
