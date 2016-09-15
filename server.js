@@ -19,6 +19,7 @@ var app = express();
 var passport = passport();
 
 // Use the Express application instance to listen to the '3000' port
+app.set('port',(process.env.PORT || 3000))
 app.listen(3000);
 
 // Log the server status to the console
